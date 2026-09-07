@@ -1,0 +1,44 @@
+name: Завести Баг (Bug Report)
+description: Сообщите нам о поломке, чтобы мы могли ее исправить
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Спасибо, что помогаете нам стать лучше!** Пожалуйста, заполните все обязательные поля ниже.
+  - type: textarea
+    id: description
+    attributes:
+      label: Описание проблемы
+      description: Кратко и понятно опишите, что именно сломалось.
+      placeholder: "Например: при нажатии на кнопку 'Купить' ничего не происходит..."
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Шаги для воспроизведения
+      description: Как нам повторить эту ошибку у себя?
+      value: |
+        1. Зайти на ...
+        2. Нажать на ...
+        3. Ввести ...
+        4. Увидеть ошибку ...
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Логи или текст ошибки
+      description: Скопируйте сюда текст ошибки, если он есть.
+      render: shell
+    validations:
+      required: false
+  - type: checkboxes
+    id: screenshots
+    attributes:
+      label: Скриншоты
+      options:
+        - label: Я прикрепил(а) скриншоты в описание выше (их можно просто перетащить в окно браузера).
+          required: true
